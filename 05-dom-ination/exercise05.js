@@ -20,6 +20,82 @@
 
 (function () {
 
+
     //your code here
+    //1.text change from black to red
+
+    let heading = document.querySelector("h1")
+    // heading.innerHTML = "hello"
+    // heading
+    heading.addEventListener("click", function () {
+        if (heading.style.color === "red") {
+            heading.style.color = "black"
+        } else {
+            heading.style.color = "red"
+        }
+
+
+    })
+
+    // 2
+    let sections = document.querySelectorAll("h5")
+    // console.log(sections.length);
+    // sections[0].remove()
+
+    for (let i = 0; i < sections.length; i++) {
+
+        if (i % 2 == 1) {
+            // console.log(i)
+            sections[i].remove(i);
+        }
+    }
+
+
+    //3 Change every instance of the word "bacon" on the page to be "LASER VISION"
+   
+    let paragraph = document.querySelectorAll("p")
+
+    for (let i = 0; i < paragraph.length; i++) {
+        // console.log(paragraph[i].innerHTML)
+        let str = paragraph[i].innerHTML
+        let res = str.replace("Bacon", "LASER VISION")
+        // console.log(res)
+        paragraph[i].innerHTML = res
+    }
+
+
+    //4. Delete the last two posts in the middle section (they have a CSS class "post")
+
+    let postArray = document.querySelectorAll(".post")
+    console.log (postArray)
+
+    console.log (postArray[postArray.length-1])
+    console.log (postArray[postArray.length-2])
+
+    postArray[postArray.length-1].remove()
+    postArray[postArray.length-2].remove()
+    
+
+    //5.Remove the images in the right column
+    
+    
+    let imageColumnRight = document.querySelector("aside")
+    console.log(imageColumnRight)
+    imageColumnRight.remove()
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 })();
